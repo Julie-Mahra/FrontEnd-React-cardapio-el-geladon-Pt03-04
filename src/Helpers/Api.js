@@ -14,7 +14,7 @@ const SacolaContext = {
 }
 
 export const Api = {
-    baseUrl: "https://api-elgeladon-julianastos.onrender.com",
+    baseUrl:  process.env.REACT_APP_API_URL,
     ...PaletaContext,
     ...SacolaContext,
 }
