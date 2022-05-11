@@ -1,6 +1,6 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./views/Home/Home";
-import Loading from "./views/Loading/Loading";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './views/Home/Home';
+import Loading from './views/Loading/Loading';
 
 function App() {
   return (

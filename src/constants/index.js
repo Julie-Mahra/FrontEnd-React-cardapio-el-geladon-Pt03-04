@@ -1,5 +1,5 @@
 export const ActionMode = Object.freeze({
-    DELETAR: "DELETAR",
-    ATUALIZAR: "ATUALIZAR",
-    NORMAL: "NORMAL",
+  DELETAR: 'DELETAR',
+  ATUALIZAR: 'ATUALIZAR',
+  NORMAL: 'NORMAL',
 });
