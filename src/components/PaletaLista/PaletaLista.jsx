@@ -1,10 +1,10 @@
-import React, { useState, useEffect, useCallback } from "react";
-import PaletaListaItem from "components/PaletaListaItem/PaletaListaItem";
-import { PaletaService } from "Services/PaletaService";
-import PaletaDetalhesModal from "components/PaletaDetalhesModal/PaletaDetalhesModal";
-import { matchByText } from "Helpers/utils";
-import "./PaletaLista.css";
-import { ActionMode } from "constants/index";
+import React, { useState, useEffect, useCallback } from 'react';
+import PaletaListaItem from 'components/PaletaListaItem/PaletaListaItem';
+import { PaletaService } from 'Services/PaletaService';
+import PaletaDetalhesModal from 'components/PaletaDetalhesModal/PaletaDetalhesModal';
+import { matchByText } from 'helpers/utils';
+import './PaletaLista.css';
+import { ActionMode } from 'constants/index';
 
 function PaletaLista({
   paletaCriada,
@@ -14,7 +14,7 @@ function PaletaLista({
   paletaEditada,
   paletaRemovida,
 }) {
-  const selecionadas = JSON.parse(localStorage.getItem("selecionadas")) ?? {};
+  const selecionadas = JSON.parse(localStorage.getItem('selecionadas')) ?? {};
 
   const [paletas, setPaletas] = useState([]);
   const [paletasFiltradas, setPaletasFiltradas] = useState([]);
@@ -39,8 +39,8 @@ function PaletaLista({
       quantidade: arr[1],
     }));
 
-    localStorage.setItem("sacola", JSON.stringify(sacola));
-    localStorage.setItem("selecionadas", JSON.stringify(paletaSelecionada));
+    localStorage.setItem('sacola', JSON.stringify(sacola));
+    localStorage.setItem('selecionadas', JSON.stringify(paletaSelecionada));
   }, [paletaSelecionada, paletas]);
 
   const removerItem = (paletaIndex) => {
@@ -76,12 +76,12 @@ function PaletaLista({
       const lista = [...paletas, paleta];
       setPaletas(lista);
     },
-    [paletas]
+    [paletas],
   );
 
   const filtroPorTitulo = ({ target }) => {
     const lista = [...paletas].filter(({ titulo }) =>
-      matchByText(titulo, target.value)
+      matchByText(titulo, target.value),
     );
     setPaletasFiltradas(lista);
   };

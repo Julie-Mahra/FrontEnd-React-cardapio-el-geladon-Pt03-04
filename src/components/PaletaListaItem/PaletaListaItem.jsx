@@ -1,5 +1,5 @@
-import { ActionMode } from "constants/index";
-import "./PaletaListaItem.css";
+import { ActionMode } from 'constants/index';
+import './PaletaListaItem.css';
 
 function PaletaListaItem({
   paleta,
@@ -34,10 +34,10 @@ function PaletaListaItem({
       return (
         <span
           className={`PaletaListaItem__tag ${
-            mode === ActionMode.DELETAR && "PaletaListaItem__tag--deletar"
+            mode === ActionMode.DELETAR && 'PaletaListaItem__tag--deletar'
           }`}
         >
-          {" "}
+          {' '}
           {mode}
         </span>
       );
@@ -45,8 +45,8 @@ function PaletaListaItem({
   return (
     <div
       className={`PaletaListaItem
-                ${mode !== ActionMode.NORMAL && "PaletaListaItem--disable"}
-                ${mode === ActionMode.DELETAR && "PaletaListaItem--deletar"}`}
+                ${mode !== ActionMode.NORMAL && 'PaletaListaItem--disable'}
+                ${mode === ActionMode.DELETAR && 'PaletaListaItem--deletar'}`}
       onClick={() => clickItem(paleta.id)}
     >
       {badgeCounter(quantidadeSelecionada, index)}
@@ -59,7 +59,7 @@ function PaletaListaItem({
           <button
             disabled={mode !== ActionMode.NORMAL}
             className={`Acoes__adicionar ${
-              !quantidadeSelecionada && "Acoes__adicionar--preencher"
+              !quantidadeSelecionada && 'Acoes__adicionar--preencher'
             }`}
             onClick={(e) => {
               e.stopPropagation();

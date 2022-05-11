@@ -1,19 +1,12 @@
-import { ActionMode } from "constants/index";
-import "./Navbar.css";
-import sacola from "assets/icons/sacola.svg";
-import paleta from "assets/icons/paleta.svg";
-import atualizar from "assets/icons/atualizar.svg";
-import deletar from "assets/icons/deletar.svg";
-import logo from "assets/logo.svg";
+import { ActionMode } from 'constants/index';
+import './Navbar.css';
+import sacola from 'assets/icons/sacola.svg';
+import paleta from 'assets/icons/paleta.svg';
+import atualizar from 'assets/icons/atualizar.svg';
+import deletar from 'assets/icons/deletar.svg';
+import logo from 'assets/logo.svg';
 
-
-function Navbar({
-    createPaleta,
-    updatePaleta,
-    mode,
-    deletePaleta,
-    openBag
-}) {
+function Navbar({ createPaleta, updatePaleta, mode, deletePaleta, openBag }) {
   return (
     <div className="Home__header Header">
       <div className="row">
@@ -30,7 +23,7 @@ function Navbar({
           <button
             type="button"
             className={`Opcoes__paleta Paleta ${
-              mode === ActionMode.ATUALIZAR && "Paleta--ativa"
+              mode === ActionMode.ATUALIZAR && 'Paleta--ativa'
             }`}
             onClick={() => updatePaleta()}
           >
@@ -45,7 +38,7 @@ function Navbar({
           <button
             type="button"
             className={`Opcoes__paleta Paleta ${
-              mode === ActionMode.DELETAR && "Paleta--deletar"
+              mode === ActionMode.DELETAR && 'Paleta--deletar'
             }`}
             onClick={() => deletePaleta()}
           >

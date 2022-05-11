@@ -1,5 +1,5 @@
-import "./PaletaDetalhesModal.css";
-import Modal from "components/Modal/Modal";
+import './PaletaDetalhesModal.css';
+import Modal from 'components/Modal/Modal';
 
 function PaletaDetalhesModal({ paleta, closeModal }) {
   return (
